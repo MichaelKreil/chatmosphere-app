@@ -1,13 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 import { useLocalStore } from './../../../store/LocalStore';
-import {ReactComponent as MuteCat} from './../../../assets/muteCatBig.svg'
+import {ReactComponent as MuteCat} from './../../../assets/muteCatSmall.svg'
 
 
 const Indicator = styled.div`
   position: absolute;
-  top: 20px;
-  left: 14px;
+  top: 130px;
+  left: 50%;
+  transform: translateX(-50%);
 `
 
 export const MuteIndicator = () => {
