@@ -1,7 +1,7 @@
 import { PropsList } from "react-zoom-pan-pinch/dist/store/interfaces/propsInterface"
 
 export const panOptions = {
-  room: { size: { x: 6000, y: 6000 } },
+  room: { size: { x: 6*768, y: 6*1056 } },
     get user() {
       return {
         //center the room
