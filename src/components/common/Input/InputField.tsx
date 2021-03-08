@@ -8,6 +8,9 @@ export const InputField:any = styled.input`
   text-align: center;
   font-weight: 500;
   font-size: ${props => props.theme.fontSize.body};
+  
+  color:${props => props.theme.primary['1']};
+  background: ${props => props.theme.base['4']};
 
   &:focus {
     outline: none;

@@ -6,6 +6,7 @@ export const NameTag = styled.div`
   font-weight: 500;
   color:${props => props.theme.primary['1']};
   background: ${props => props.theme.base['4']};
+  border: 1px solid ${props => props.theme.base['4']};
   text-align: center;
   display: flex;
   flex-direction: row;

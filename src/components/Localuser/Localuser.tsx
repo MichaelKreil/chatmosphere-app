@@ -13,7 +13,8 @@ const Container = styled.div`
   width: ${panOptions.user.size.x}px;
   height: ${panOptions.user.size.y}px;
   position: absolute;
-  border: 4px solid #D9DBEB;
+  border: 0.5px solid #000;
+  filter: drop-shadow(0px 0px 4px rgba(0,0,0,0.5));
   border-radius: 300px;
   cursor: default;
   &:active {

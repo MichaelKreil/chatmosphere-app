@@ -25,7 +25,7 @@ const StyledHeader = styled.a`
   font-weight: 500;
   font-size: 1.25rem;
   text-decoration: none;
-  color:#000;
+  color:#eee;
   height: 40px;
   &:hover {
     background-color: ${props => props.theme.base['4']};
