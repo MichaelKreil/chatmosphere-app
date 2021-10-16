@@ -16,7 +16,11 @@ export const PanWrapper = ({children}) => {
   // const throttleSendPos = useCallback(throttle(setLocalPosition, 200),[])
   
   useEffect(() => {
-    onPanChange({scale:transformWrapperOptions.scale,positionX:transformWrapperOptions.defaultPositionX,positionY:transformWrapperOptions.defaultPositionY})
+    onPanChange({
+      scale:transformWrapperOptions.scale,
+      positionX:transformWrapperOptions.defaultPositionX,
+      positionY:transformWrapperOptions.defaultPositionY
+    })
     setLocalPosition(panOptions.user.initialPosition)
     // throttlePan({scale:transformWrapperOptions.scale,positionX:transformWrapperOptions.defaultPositionX,positionY:transformWrapperOptions.defaultPositionY})
     // throttleSendPos(panOptions.user.initialPosition)
