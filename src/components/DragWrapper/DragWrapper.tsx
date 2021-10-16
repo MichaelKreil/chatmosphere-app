@@ -13,7 +13,9 @@ interface Point {
   x:number,
   y:number
 }
- 
+
+const step = 30;
+
 const DragElement = styled.div`
   position: absolute;
 `
@@ -52,9 +54,40 @@ const DragWrapper = ({initPos={x:0,y:0}, children, callback=(pos)=>null, current
     document.addEventListener("mousemove", onDrag);
   }
 
+  const onKeyDown = (e) => {
+    if (!e.key.startsWith('Arrow')) return;
+    if (element.current === undefined) return;
+
+    e.preventDefault();
+
+    const boundingRect = element.current.getBoundingClientRect()
+
+    let xPos = (boundingRect.x - panOffset.x);
+    let yPos = (boundingRect.y - panOffset.y);
+
+    switch (e.key) {
+      case 'ArrowLeft':  xPos -= step; break;
+      case 'ArrowRight': xPos += step; break;
+      case 'ArrowUp':    yPos -= step; break;
+      case 'ArrowDown':  yPos += step; break;
+    }
+    xPos = Math.round(xPos / currentScale)
+    yPos = Math.round(yPos / currentScale)
+    
+
+    element.current.setAttribute('style', `transform:translate(${xPos}px, ${yPos}px);`)
+    callback({x:xPos, y:yPos})
+  }
+  
+
   useEffect(() => {
     element?.current?.setAttribute('style', `transform:translate(${initPos.x}px, ${initPos.y}px);`)
   },[])
+
+  useEffect(() => {
+    document.addEventListener('keydown', onKeyDown);
+    return () => document.removeEventListener('keydown', onKeyDown);
+  })
 
   return (
     <DragElement ref={element} onMouseDown={onMouseDown} id="DragElement">
