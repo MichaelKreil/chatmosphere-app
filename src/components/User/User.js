@@ -23,7 +23,7 @@ export const User = ({id, user}) => {
       <ReloadHint />
       <AudioTrack id={id} volume={myVolume} />
       <NameTag>{user?.user?._displayName || 'Friendly Sphere'}</NameTag>
-      <div>Volume {Math.round(myVolume * 11)}</div>
+      <!-- <div>Volume {Math.round(myVolume * 11)}</div> -->
       {isMute && <MuteIndicator>🤭</MuteIndicator>}
     </div>
   )
