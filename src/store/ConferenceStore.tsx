@@ -208,7 +208,10 @@ export const useConferenceStore = create<ConferenceStore>((set,get) => {
     const users = newState.users
     Object.keys(users).map(key => {
       const user = users[key]
-      newState.users[key]['volume'] = getVolumeByDistance(localPos, user.pos)
+      let volume = getVolumeByDistance(localPos, user.pos);
+      let name = ''+user?.user?._displayName;
+      if (name.includes('📢')) volume = 1;
+      newState.users[key]['volume'] = volume;
       return null
     })
   })
