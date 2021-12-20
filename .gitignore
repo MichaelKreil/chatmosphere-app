@@ -25,3 +25,5 @@ yarn-error.log*
 serverConfig.ts
 .env
 .eslintcache
+
+images
