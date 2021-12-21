@@ -26,7 +26,7 @@ const FeedbackLink = styled.a`
 
 export const SocialIcons = () => (
 	<ContainerBox>
-		<IconLink target="_blank" url="https://github.com/Chatmosphere/react-app">
+		<IconLink target="_blank" url="https://github.com/Chatmosphere/chatmosphere-app">
 			<FaGithub />
 		</IconLink>
 		<IconLink target="_blank" url="https://twitter.com/chatmosphereCC">
