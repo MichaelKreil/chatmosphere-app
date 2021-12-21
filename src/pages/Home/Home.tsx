@@ -31,7 +31,7 @@ export const Home = () => {
 			<Info>
 				Welcome to our Prototype
 				<br />
-				Please use <b>Safari</b> or <b>Chrome</b> for now for a stable Experience
+				Please use <b>Chrome</b> for now for a stable Experience
 			</Info>
 			<CenterContainer>
 			<BigHeadContainer>
