@@ -29,6 +29,9 @@ export const SocialIcons = () => (
 		<IconLink target="_blank" url="https://github.com/Chatmosphere/chatmosphere-app">
 			<FaGithub />
 		</IconLink>
+		<FeedbackLink target="_blank" href="https://github.com/MichaelKreil/chatmosphere-app">
+			this fork
+		</FeedbackLink>
 		<IconLink target="_blank" url="https://twitter.com/chatmosphereCC">
 			<FaTwitterSquare />
 		</IconLink>
